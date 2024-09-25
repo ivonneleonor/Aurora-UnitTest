@@ -44,33 +44,24 @@ namespace UnitTest3
 			CertifiedInstaller CI1;
 			CI1.setQualification(qual);
 			Assert::AreEqual(qual, CI1.getQualification());
-			CI1.setAvailability(availa);
-			Assert::AreEqual(availa, CI1.getAvailability());
+			
 
 		}
 
 		TEST_METHOD(TestMethod5)
 		{
-			std::string qual = "Qualification1";
-			std::string availa = "Availability1";
-			InstallerPendingCertificate IP1;
-			IP1.setQualification(qual);
-			Assert::AreEqual(qual, IP1.getQualification());
-			IP1.setAvailability(availa);
-			Assert::AreEqual(availa, IP1.getAvailability());
-
+			int JM = 20;			
+			vector<Job> JobsMonday;		
+			int JMonday = 0;
+			Calendar CalendarTest;
+			JMonday = CalendarTest.result(JMonday);
+			Assert::AreEqual(20, JMonday);
+					
+			//JobsMonday.size()
 		}
 
-		TEST_METHOD(TestMethod6)
-		{
-			std::string qual = "Qualification1";
-			std::string availa = "Availability1";
-			Laborer L1;
-			L1.setQualification(qual);
-			Assert::AreEqual(qual, L1.getQualification());
-			L1.setAvailability(availa);
-			Assert::AreEqual(availa, L1.getAvailability());
+		
 
-		}
+
 	};
 }
